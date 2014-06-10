@@ -10,7 +10,14 @@ class Biblioteca
 	end
 
 	def livro
-		@livros.f
+		@livros.values.flatten
+	end
+
+	def livros_por_categoria(categoria)
+		@livros[categoria].each do |livro|
+			yield livro if block_given?
+		end
+		
 	end
 
 	# ||= "Se for nulo recebe o que vem depois do ="

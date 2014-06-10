@@ -4,6 +4,7 @@ class Livro
 
 	attr_accessor :preco
 	attr_reader :categoria
+	attr_reader :autor
 	attr_reader :isbn
 
 	#attr_writer :preco
