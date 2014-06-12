@@ -2,19 +2,18 @@
 
 class Livro
 
-	attr_accessor :preco
-	attr_reader :categoria
-	attr_reader :autor
-	attr_reader :isbn
+	attr_accessor :valor
+	attr_reader :categoria, :autor,:isbn , :titulo
 
 	#attr_writer :preco
 	#attr_reader :preco
 
-	def initialize(autor, isbn = "1", numero_de_paginas, preco,categoria)
+	def initialize(titulo,autor, isbn = "1", numero_de_paginas, valor ,categoria)
+		@titulo = titulo
 		@autor = autor
 		@isbn = isbn
 		@numero_de_paginas = numero_de_paginas
-		@preco = preco
+		@valor = valor
 		@categoria = categoria
 	end
 
