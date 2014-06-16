@@ -1,9 +1,15 @@
 # encoding: utf-8
+# coding: utf-8
+require File.expand_path("midia")
 
-class Livro
+class Livro < Midia
 
-	attr_accessor :valor
-	attr_reader :categoria, :autor,:isbn , :titulo
+	# todos os métodos de instância são
+	# incluídos nos objetos Livro
+	
+	include FormatadorMoeda
+
+	attr_reader :categoria, :autor,:isbn
 
 	#attr_writer :preco
 	#attr_reader :preco
@@ -15,16 +21,17 @@ class Livro
 		@numero_de_paginas = numero_de_paginas
 		@valor = valor
 		@categoria = categoria
+		@desconto = 0.15
 	end
 
 	def to_s
-		return "Autor: #{@autor}, Isbn: #{@isbn}, Páginas: #{@numero_de_paginas}"
+		return "Autor: #{@autor}, Isbn: #{@isbn},Páginas: #{@numero_de_paginas},Categoria: #{@categoria}"
 	end
 
 	def eql?(outro_livro)
 		@isbn == outro_livro.isbn
 	end
-	
+
 	def hash
 		@isbn.hash
 	end
