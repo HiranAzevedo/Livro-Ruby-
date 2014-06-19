@@ -1,12 +1,13 @@
 # encoding: utf-8
 
 #Importações
-require File.expand_path("livro")
-require File.expand_path("biblioteca")
-require File.expand_path("relatorio")
-require File.expand_path("banco_de_arquivos")
-require File.expand_path("midia")
-require File.expand_path("dvd")
+#require File.expand_path("livro")
+#require File.expand_path("biblioteca")
+#require File.expand_path("relatorio")
+#require File.expand_path("banco_de_arquivos")
+#require File.expand_path("midia")
+#require File.expand_path("dvd")
+require File.expand_path("revista")
 require 'yaml'
 
 
@@ -26,7 +27,5 @@ require 'yaml'
 #teste_e_design = Livro.new "TDD","Mauricio Aniche", "123454",247, 69.9, :testes
 #biblioteca.adiciona teste_e_design
 
-teste_e_design = Livro.new "TDD", "Mauricio Aniche", "123454", 247,69.9, :testes
-p teste_e_design.valor_com_desconto 
-windows = DVD.new "Windows 7 for Dummies", 98.9, :sistemas_operacionais
-p windows.valor_com_desconto
+mundo_j = Revista.new "Mundo J", 10.9
+mundo_j.save

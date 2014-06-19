@@ -2,6 +2,10 @@
 require File.expand_path("midia")
 class DVD < Midia
 
+	extend FormatadorMoeda
+
+	formata_moeda :valor_com_desconto, :valor
+
 	def initialize(titulo,valor,categoria)
 		super()
 		@titulo = titulo
